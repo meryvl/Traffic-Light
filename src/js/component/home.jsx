@@ -3,27 +3,29 @@ import React, { useEffect, useState } from "react";
 //include images into your bundle
 //create your first component
 const Home = () => {
-const color=['red','yellow','green']
-let purple = selectedColor === "purple" ? "light purple clicked" : "light purple";
-const [mostrar, setMostrar] = useState(false);
+const color=['red','yellow','green', 'purple']
+let i= 0;
 
+const [selectedColor , setSelectedColor] = useState("")
+let purple = selectedColor === "purple" ? "light purple glow" : "light purple ";
+const start= () => {
+	setInterval(()=>{
+	setSelectedColor(color[i++])
+	if(i> 3){i = 0}
+	},3000);
+	}
+
+const [mostrar, setMostrar] = useState(false);
 if (!mostrar) {
     purple += " d-none";
+  }else{
+	color.push('purple')
   }
   const createLigth = () => {
     setMostrar(!mostrar);
   };
 
 
-let i= 0;
-let interval;
-const [selectedColor , setSelectedColor] = useState("")
-const start= () => {
-interval = setInterval(()=>{
-	setSelectedColor(color[i++])
-if(i>color.length-1){i = 0}
-},3000);
-}
 const changeLigth = () => {
     setSelectedColor("red");
     if (selectedColor === "red") {
@@ -31,7 +33,7 @@ const changeLigth = () => {
     } else if (selectedColor === "yellow") {
       setSelectedColor("green");
     } else if(selectedColor === 'green'){
-      setSelect("purple");
+      setSelectedColor("purple");
     }else{setSelectedColor('red')}
   };
 
