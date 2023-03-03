@@ -31,7 +31,7 @@ margin: 10px 0px ;
 }
 .glow {
     border-radius: 50%;
-    box-shadow: 0px 0px 9px 4px #7485e8;
+    box-shadow: 0px 0px 9px 4px #7476e8;
     animation: glow 1.5s linear infinite alternate;
   }
   
