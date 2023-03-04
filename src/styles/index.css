@@ -10,7 +10,19 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+body{
+background-image: url("https://wallpaperstock.net/wallpapers/thumbs1/42870hd.jpg");
 
+}
+.palo{
+  width: 30px;
+  height: 100px;
+  background: #000;
+  border: solid;
+  border-top: 0px;
+  border-bottom: 0px;
+  border-color: gray;
+}
 .semaforo{
   padding: 4px;
     width: 100px;
