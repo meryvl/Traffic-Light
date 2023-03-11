@@ -5,7 +5,8 @@ import Button from "./Button.jsx";
 import { initialColors } from "../function/const.js";
 
 const Home =() => {
-const [ colors , setColors] = useState(initialColors);
+
+const colors =['red','yellow','green','purple'];
 let i= 0;
 const [selectedColor , setSelectedColor] = useState("")
 let purple = selectedColor === "purple" ? "light purple glow" : "light purple ";
@@ -15,28 +16,15 @@ const start= () => {
  setInterval(()=>{
 	setSelectedColor(colors[i++])
 	if(i> colors.length){i = 0}
+ }
+,3000)
 }
-,3000);
-}
-useEffect(()=>{
-    if (!mostrar) {
-        purple += " d-none";
-      }
-      else {
-        setColors([...colors, purple]);
-    
-    }
 
+  if (!mostrar) {
+    purple += " d-none";
+  }
 
-
-},[mostrar])
-  
-
-
-    
-    
-
-
+   
 
 
 const createLigth = () => {
